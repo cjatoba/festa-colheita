@@ -1,814 +1,920 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Venha colaborar com a Festa da Colheita! Traga refrigerante ou carne. 15/08 às 19h30. PIX disponível.">
-    <meta name="theme-color" content="#1a1a1a">
-    <meta property="og:title" content="🌾 Festa da Colheita">
-    <meta property="og:description" content="Convite para colaborar com refrigerante 🥤 ou carne 🥩 na Festa da Colheita. Evento: 15/08 às 19h30. Contribua via PIX ou dinheiro.">
-    <meta property="og:type" content="website">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Venha colaborar com a Festa da Colheita! Traga refrigerante ou carne. 15/08 às 19h30. PIX disponível."
+    />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta property="og:title" content="🌾 Festa da Colheita" />
+    <meta
+      property="og:description"
+      content="Convite para colaborar com refrigerante 🥤 ou carne 🥩 na Festa da Colheita. Evento: 15/08 às 19h30. Contribua via PIX ou dinheiro."
+    />
+    <meta property="og:type" content="website" />
     <title>🌾 Festa da Colheita - Venha Colaborar!</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: #0f0f0f;
+        color: #e8e8e8;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ===== HERO SIMPLES ===== */
+      header {
+        background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+        border-bottom: 1px solid #2d2d2d;
+        padding: 60px 20px 40px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-family: "Lora", serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+        color: #ffffff;
+        letter-spacing: -0.5px;
+      }
+
+      header p {
+        font-size: 1rem;
+        color: #b0b0b0;
+        font-weight: 400;
+        line-height: 1.6;
+      }
+
+      .hero-emoji {
+        font-size: 3rem;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      /* ===== MAIN CONTENT ===== */
+      main {
+        padding: 60px 0;
+      }
+
+      section {
+        margin-bottom: 80px;
+      }
+
+      section:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ===== PIX HERO SECTION ===== */
+      .pix-hero {
+        background: linear-gradient(135deg, #1f7f3a 0%, #148a2b 100%);
+        border-radius: 24px;
+        padding: 80px 40px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(20, 138, 43, 0.25);
+        margin-bottom: 100px;
+      }
+
+      .pix-hero h2 {
+        font-family: "Lora", serif;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 24px;
+        letter-spacing: -0.5px;
+      }
+
+      .pix-hero-subtitle {
+        font-size: 1.1rem;
+        color: #d0f0d8;
+        margin-bottom: 50px;
+        font-weight: 500;
+      }
+
+      .pix-layout-hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      @media (max-width: 768px) {
+        .pix-layout-hero {
+          grid-template-columns: 1fr;
+          gap: 40px;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0f0f0f;
-            color: #e8e8e8;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* ===== HERO SIMPLES ===== */
-        header {
-            background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
-            border-bottom: 1px solid #2d2d2d;
-            padding: 60px 20px 40px;
-            text-align: center;
-        }
-
-        header h1 {
-            font-family: 'Lora', serif;
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #ffffff;
-            letter-spacing: -0.5px;
-        }
-
-        header p {
-            font-size: 1rem;
-            color: #b0b0b0;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        .hero-emoji {
-            font-size: 3rem;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        /* ===== MAIN CONTENT ===== */
-        main {
-            padding: 60px 0;
-        }
-
-        section {
-            margin-bottom: 80px;
-        }
-
-        section:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ===== PIX HERO SECTION ===== */
         .pix-hero {
-            background: linear-gradient(135deg, #1f7f3a 0%, #148a2b 100%);
-            border-radius: 24px;
-            padding: 80px 40px;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(20, 138, 43, 0.25);
-            margin-bottom: 100px;
+          padding: 50px 30px;
         }
 
         .pix-hero h2 {
-            font-family: 'Lora', serif;
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
+          font-size: 2rem;
+        }
+      }
+
+      .qr-wrapper {
+        text-align: center;
+      }
+
+      .qr-box {
+        display: inline-block;
+        background: #ffffff;
+        padding: 24px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      #qrcode {
+        display: flex;
+        justify-content: center;
+      }
+
+      .qr-label {
+        margin-top: 24px;
+        font-size: 1rem;
+        color: #d0f0d8;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+
+      .pix-content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      .pix-key-box {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+        padding: 32px;
+        backdrop-filter: blur(10px);
+      }
+
+      .pix-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #90ee90;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .pix-display {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 18px 20px;
+        font-family: "Monaco", "Courier New", monospace;
+        font-size: 1rem;
+        color: #90ee90;
+        word-break: break-all;
+        margin-bottom: 18px;
+        line-height: 1.8;
+      }
+
+      .copy-btn {
+        background: #90ee90;
+        color: #0f0f0f;
+        border: none;
+        border-radius: 12px;
+        padding: 16px 24px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .copy-btn:hover {
+        background: #76dd76;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
+      }
+
+      .payment-note {
+        background: rgba(255, 193, 7, 0.12);
+        border-left: 4px solid #ffc107;
+        padding: 18px 20px;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        color: #ffd54f;
+        line-height: 1.6;
+        font-weight: 500;
+      }
+
+      .whatsapp-cta {
+        text-align: center;
+      }
+
+      .whatsapp-cta p {
+        font-size: 0.9rem;
+        color: #d0f0d8;
+        margin-bottom: 16px;
+        font-weight: 500;
+      }
+
+      /* ===== ITEMS SECTION ===== */
+      .items-section {
+        background: #1a1a1a;
+        border-radius: 20px;
+        padding: 60px 40px;
+        margin-bottom: 80px;
+      }
+
+      .section-title {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 48px;
+        letter-spacing: -0.5px;
+      }
+
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 28px;
+      }
+
+      .item-card {
+        background: #252525;
+        border: 1px solid #3a3a3a;
+        border-radius: 16px;
+        padding: 40px 28px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .item-card:hover {
+        transform: translateY(-8px);
+        background: #2d2d2d;
+        border-color: #90ee90;
+        box-shadow: 0 12px 40px rgba(144, 238, 144, 0.15);
+      }
+
+      .item-icon {
+        font-size: 3.5rem;
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      .item-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: -0.3px;
+      }
+
+      /* ===== COUNTDOWN SECTION ===== */
+      .countdown-section {
+        background: #1a1a1a;
+        border-radius: 20px;
+        padding: 60px 40px;
+        text-align: center;
+      }
+
+      .countdown-title {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 48px;
+        letter-spacing: -0.5px;
+      }
+
+      .countdown-bar {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 0;
+      }
+
+      .countdown-item {
+        background: #252525;
+        border: 1px solid #3a3a3a;
+        border-radius: 16px;
+        padding: 32px 20px;
+        text-align: center;
+      }
+
+      .countdown-value {
+        font-size: 2.4rem;
+        font-weight: 800;
+        display: block;
+        font-variant-numeric: tabular-nums;
+        margin-bottom: 8px;
+        color: #90ee90;
+      }
+
+      .countdown-label {
+        font-size: 0.85rem;
+        color: #888888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+
+      /* ===== BTN GENÉRICO ===== */
+      .btn {
+        border: none;
+        border-radius: 12px;
+        padding: 16px 28px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Inter", sans-serif;
+      }
+
+      .btn-primary {
+        background: #90ee90;
+        color: #0f0f0f;
+      }
+
+      .btn-primary:hover {
+        background: #76dd76;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
+      }
+
+      .btn-secondary {
+        background: #3a3a3a;
+        color: #ffffff;
+        border: 1px solid #555555;
+      }
+
+      .btn-secondary:hover {
+        background: #454545;
+        border-color: #90ee90;
+        transform: translateY(-2px);
+      }
+
+      /* ===== INFO GRID ===== */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+      }
+
+      .info-item {
+        text-align: center;
+      }
+
+      .info-label {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #888888;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .info-value {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #90ee90;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: #1a1a1a;
+        border-top: 1px solid #2d2d2d;
+        color: #b0b0b0;
+        text-align: center;
+        padding: 50px 20px;
+        margin-top: 80px;
+      }
+
+      footer p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      footer strong {
+        font-weight: 600;
+        color: #ffffff;
+      }
+
+      /* ===== TOAST ===== */
+      .toast {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #90ee90;
+        color: #0f0f0f;
+        padding: 14px 20px;
+        border-radius: 10px;
+        box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
+        z-index: 999;
+        animation: slideInUp 0.3s ease;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+
+      @keyframes slideInUp {
+        from {
+          transform: translateY(100px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 640px) {
+        header {
+          padding: 40px 20px 30px;
+        }
+
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .hero-emoji {
+          font-size: 2.5rem;
+          margin-bottom: 12px;
+        }
+
+        .pix-hero {
+          padding: 40px 20px;
+          margin-bottom: 60px;
+        }
+
+        .pix-hero h2 {
+          font-size: 1.8rem;
+          margin-bottom: 16px;
         }
 
         .pix-hero-subtitle {
-            font-size: 1.1rem;
-            color: #d0f0d8;
-            margin-bottom: 50px;
-            font-weight: 500;
+          font-size: 1rem;
+          margin-bottom: 32px;
         }
 
         .pix-layout-hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+          gap: 28px;
         }
 
-        @media (max-width: 768px) {
-            .pix-layout-hero {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .pix-hero {
-                padding: 50px 30px;
-            }
-
-            .pix-hero h2 {
-                font-size: 2rem;
-            }
-        }
-
-        .qr-wrapper {
-            text-align: center;
-        }
-
-        .qr-box {
-            display: inline-block;
-            background: #ffffff;
-            padding: 24px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        #qrcode {
-            display: flex;
-            justify-content: center;
-        }
-
-        .qr-label {
-            margin-top: 24px;
-            font-size: 1rem;
-            color: #d0f0d8;
-            font-weight: 600;
-            line-height: 1.6;
-        }
-
-        .pix-content {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-
-        .pix-key-box {
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 16px;
-            padding: 32px;
-            backdrop-filter: blur(10px);
-        }
-
-        .pix-label {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #90ee90;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .pix-display {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 18px 20px;
-            font-family: 'Monaco', 'Courier New', monospace;
-            font-size: 1rem;
-            color: #90ee90;
-            word-break: break-all;
-            margin-bottom: 18px;
-            line-height: 1.8;
-        }
-
-        .copy-btn {
-            background: #90ee90;
-            color: #0f0f0f;
-            border: none;
-            border-radius: 12px;
-            padding: 16px 24px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .copy-btn:hover {
-            background: #76dd76;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
-        }
-
-        .payment-note {
-            background: rgba(255, 193, 7, 0.12);
-            border-left: 4px solid #ffc107;
-            padding: 18px 20px;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            color: #ffd54f;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        .whatsapp-cta {
-            text-align: center;
-        }
-
-        .whatsapp-cta p {
-            font-size: 0.9rem;
-            color: #d0f0d8;
-            margin-bottom: 16px;
-            font-weight: 500;
-        }
-
-        /* ===== ITEMS SECTION ===== */
-        .items-section {
-            background: #1a1a1a;
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-        }
-
-        .section-title {
-            font-family: 'Lora', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 48px;
-            letter-spacing: -0.5px;
-        }
-
-        .items-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 28px;
-        }
-
-        .item-card {
-            background: #252525;
-            border: 1px solid #3a3a3a;
-            border-radius: 16px;
-            padding: 40px 28px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .item-card:hover {
-            transform: translateY(-8px);
-            background: #2d2d2d;
-            border-color: #90ee90;
-            box-shadow: 0 12px 40px rgba(144, 238, 144, 0.15);
-        }
-
-        .item-icon {
-            font-size: 3.5rem;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .item-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: -0.3px;
-        }
-
-        /* ===== COUNTDOWN SECTION ===== */
+        .items-section,
         .countdown-section {
-            background: #1a1a1a;
-            border-radius: 20px;
-            padding: 60px 40px;
-            text-align: center;
+          padding: 40px 20px;
+          margin-bottom: 60px;
         }
 
+        .section-title,
         .countdown-title {
-            font-family: 'Lora', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 48px;
-            letter-spacing: -0.5px;
+          font-size: 1.6rem;
+          margin-bottom: 32px;
         }
 
         .countdown-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 0;
+          gap: 4px;
         }
 
         .countdown-item {
-            background: #252525;
-            border: 1px solid #3a3a3a;
-            border-radius: 16px;
-            padding: 32px 20px;
-            text-align: center;
+          padding: 16px 8px;
         }
 
         .countdown-value {
-            font-size: 2.4rem;
-            font-weight: 800;
-            display: block;
-            font-variant-numeric: tabular-nums;
-            margin-bottom: 8px;
-            color: #90ee90;
+          font-size: 1.2rem;
+          margin-bottom: 4px;
         }
 
         .countdown-label {
-            font-size: 0.85rem;
-            color: #888888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
+          font-size: 0.6rem;
+          line-height: 1.2;
         }
 
-        /* ===== BTN GENÉRICO ===== */
-        .btn {
-            border: none;
-            border-radius: 12px;
-            padding: 16px 28px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Inter', sans-serif;
+        .items-grid {
+          gap: 16px;
         }
 
-        .btn-primary {
-            background: #90ee90;
-            color: #0f0f0f;
-        }
-
-        .btn-primary:hover {
-            background: #76dd76;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
-        }
-
-        .btn-secondary {
-            background: #3a3a3a;
-            color: #ffffff;
-            border: 1px solid #555555;
-        }
-
-        .btn-secondary:hover {
-            background: #454545;
-            border-color: #90ee90;
-            transform: translateY(-2px);
-        }
-
-        /* ===== INFO GRID ===== */
         .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            margin-top: 0;
-            padding-top: 0;
-            border-top: none;
+          gap: 20px;
+          margin-top: 32px;
+          padding-top: 32px;
+          border-top: 1px solid #3a3a3a;
         }
 
-        .info-item {
-            text-align: center;
+        .btn {
+          width: 100%;
+          justify-content: center;
         }
 
-        .info-label {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #888888;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .info-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #90ee90;
-            font-variant-numeric: tabular-nums;
-        }
-
-        /* ===== FOOTER ===== */
         footer {
-            background: #1a1a1a;
-            border-top: 1px solid #2d2d2d;
-            color: #b0b0b0;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 80px;
+          padding: 40px 20px;
+          margin-top: 60px;
         }
+      }
 
-        footer p {
-            font-size: 0.95rem;
-            line-height: 1.7;
+      /* ===== FAQ SECTION ===== */
+      .faq-section {
+        background: #1a1a1a;
+        border-radius: 20px;
+        padding: 60px 40px;
+        margin-bottom: 80px;
+      }
+
+      .faq-title {
+        font-family: "Lora", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 48px;
+        letter-spacing: -0.5px;
+      }
+
+      .faq-item {
+        background: #252525;
+        border: 1px solid #3a3a3a;
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+
+      .faq-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .faq-question {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #90ee90;
+        margin-bottom: 12px;
+      }
+
+      .faq-answer {
+        font-size: 1rem;
+        color: #d0f0d8;
+        line-height: 1.7;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
         }
-
-        footer strong {
-            font-weight: 600;
-            color: #ffffff;
-        }
-
-        /* ===== TOAST ===== */
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #90ee90;
-            color: #0f0f0f;
-            padding: 14px 20px;
-            border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(144, 238, 144, 0.3);
-            z-index: 999;
-            animation: slideInUp 0.3s ease;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        @keyframes slideInUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 640px) {
-            header {
-                padding: 40px 20px 30px;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .hero-emoji {
-                font-size: 2.5rem;
-                margin-bottom: 12px;
-            }
-
-            .pix-hero {
-                padding: 40px 20px;
-                margin-bottom: 60px;
-            }
-
-            .pix-hero h2 {
-                font-size: 1.8rem;
-                margin-bottom: 16px;
-            }
-
-            .pix-hero-subtitle {
-                font-size: 1rem;
-                margin-bottom: 32px;
-            }
-
-            .pix-layout-hero {
-                gap: 28px;
-            }
-
-            .items-section, .countdown-section {
-                padding: 40px 20px;
-                margin-bottom: 60px;
-            }
-
-            .section-title, .countdown-title {
-                font-size: 1.6rem;
-                margin-bottom: 32px;
-            }
-
-            .countdown-bar {
-                gap: 4px;
-            }
-
-            .countdown-item {
-                padding: 16px 8px;
-            }
-
-            .countdown-value {
-                font-size: 1.2rem;
-                margin-bottom: 4px;
-            }
-
-            .countdown-label {
-                font-size: 0.6rem;
-                line-height: 1.2;
-            }
-
-            .items-grid {
-                gap: 16px;
-            }
-
-            .info-grid {
-                gap: 20px;
-                margin-top: 32px;
-                padding-top: 32px;
-                border-top: 1px solid #3a3a3a;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            footer {
-                padding: 40px 20px;
-                margin-top: 60px;
-            }
-        }
-
-
-        /* ===== FAQ SECTION ===== */
-        .faq-section {
-            background: #1a1a1a;
-            border-radius: 20px;
-            padding: 60px 40px;
-            margin-bottom: 80px;
-        }
-
-        .faq-title {
-            font-family: 'Lora', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: #ffffff;
-            text-align: center;
-            margin-bottom: 48px;
-            letter-spacing: -0.5px;
-        }
-
-        .faq-item {
-            background: #252525;
-            border: 1px solid #3a3a3a;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 20px;
-        }
-
-        .faq-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .faq-question {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #90ee90;
-            margin-bottom: 12px;
-        }
-
-        .faq-answer {
-            font-size: 1rem;
-            color: #d0f0d8;
-            line-height: 1.7;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation: none !important;
-                transition: none !important;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- HEADER SIMPLES -->
     <header>
-        <div class="container">
-            <div class="hero-emoji">🌾</div>
-            <h1>Festa da Colheita</h1>
-            <p><strong>Contamos com sua ajuda!</strong><br>Colabore conosco para a Festa da Colheita<br>15 de agosto às 19h30</p>
-        </div>
+      <div class="container">
+        <div class="hero-emoji">🌾</div>
+        <h1>Festa da Colheita</h1>
+        <p>
+          <strong>Contamos com sua ajuda!</strong><br />Colabore conosco para a
+          Festa da Colheita<br />15 de agosto às 19h30
+        </p>
+      </div>
     </header>
 
     <main>
-        <!-- PIX HERO - SEÇÃO PRINCIPAL -->
-        <section>
-            <div class="container">
-                <div class="pix-hero">
-                    <h2>🙏 Sua Contribuição é Importante</h2>
-                    <p class="pix-hero-subtitle">Use PIX para colaborar com a Festa da Colheita</p>
-                    
-                    <div class="pix-layout-hero">
-                        <div class="qr-wrapper">
-                            <div class="qr-box">
-                                <div id="qrcode"></div>
-                            </div>
-                            <div class="qr-label">Escaneie para contribuir</div>
-                        </div>
+      <!-- PIX HERO - SEÇÃO PRINCIPAL -->
+      <section>
+        <div class="container">
+          <div class="pix-hero">
+            <h2>🙏 Sua Contribuição é Importante</h2>
+            <p class="pix-hero-subtitle">
+              Use PIX para colaborar com a Festa da Colheita
+            </p>
 
-                        <div class="pix-content">
-                            <div class="pix-key-box">
-                                <label class="pix-label">Chave PIX</label>
-                                <div class="pix-display" id="pixKey">22a2c372-d1df-47e6-8e0d-b758635c78a9</div>
-                                <button class="copy-btn" onclick="copiarPix()">
-                                    <span>📋</span>
-                                    <span>Copiar</span>
-                                </button>
-                            </div>
-
-                            <div class="payment-note">
-                                💵 <strong>Prefere contribuir em dinheiro presencialmente?</strong><br>Procure o irmão Clayton ou Isaque no culto
-                            </div>
-
-                        </div>
-                    </div>
+            <div class="pix-layout-hero">
+              <div class="qr-wrapper">
+                <div class="qr-box">
+                  <div id="qrcode"></div>
                 </div>
-            </div>
-        </section>
+                <div class="qr-label">Escaneie para contribuir</div>
+              </div>
 
-        <!-- COMPARTILHAR -->
-        <section>
-            <div class="container">
-                <div style="text-align: center; margin: 60px 0;">
-                    <p style="color: #b0b0b0; margin-bottom: 24px; font-size: 1rem;">Compartilhe com os irmãos</p>
-                    <button class="btn btn-primary" onclick="compartilharWhatsapp()" style="display: inline-flex;">
-                        <span><svg viewBox="0 0 448 512" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 69.2 27 107.2 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-67.8-4.3-6.8c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.6-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.5 19-19.5 46.3 0 27.3 20 53.7 22.6 57.4 2.6 3.7 36.1 55.1 87.5 77.3 12.3 5.3 21.9 8.5 29.4 11 12.3 3.9 23.5 3.4 32.4 2 10.2-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></span>
-                        <span>Compartilhar no WhatsApp</span>
-                    </button>
+              <div class="pix-content">
+                <div class="pix-key-box">
+                  <label class="pix-label">Chave PIX</label>
+                  <div class="pix-display" id="pixKey">
+                    22a2c372-d1df-47e6-8e0d-b758635c78a9
+                  </div>
+                  <button class="copy-btn" onclick="copiarPix()">
+                    <span>📋</span>
+                    <span>Copiar</span>
+                  </button>
                 </div>
-            </div>
-        </section>
 
-        <!-- INFORMAÇÃO SOBRE A CONTRIBUIÇÃO -->
-        <section>
-            <div class="container">
-                <div style="background: #1a1a1a; border-radius: 20px; padding: 50px 40px; text-align: center; margin-bottom: 60px;">
-                    <p style="font-size: 1.1rem; color: #d0f0d8; line-height: 1.8; margin: 0;">
-                        <strong>Sua contribuição será utilizada para comprar</strong><br>
-                        <span style="font-size: 1.3rem; color: #90ee90; font-weight: 700; white-space: nowrap; display: inline-block;">Refrigerante 🥤 e Carne 🥩</span>
-                    </p>
+                <div class="payment-note">
+                  💵
+                  <strong
+                    >Prefere contribuir em dinheiro presencialmente?</strong
+                  ><br />Procure o irmão Clayton ou Isaque no culto
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- COUNTDOWN -->
-        <section>
-            <div class="container">
-                <div class="countdown-section">
-                    <h2 class="countdown-title">Faltam</h2>
-                    <div class="countdown-bar">
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="days">0</span>
-                            <span class="countdown-label">dias</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="hours">0</span>
-                            <span class="countdown-label">horas</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="minutes">0</span>
-                            <span class="countdown-label">minutos</span>
-                        </div>
-                        <div class="countdown-item">
-                            <span class="countdown-value" id="seconds">0</span>
-                            <span class="countdown-label">segundos</span>
-                        </div>
-                    </div>
+      <!-- COMPARTILHAR -->
+      <section>
+        <div class="container">
+          <div style="text-align: center; margin: 60px 0">
+            <p style="color: #b0b0b0; margin-bottom: 24px; font-size: 1rem">
+              Compartilhe com os irmãos
+            </p>
+            <button
+              class="btn btn-primary"
+              onclick="compartilharWhatsapp()"
+              style="display: inline-flex"
+            >
+              <span
+                ><svg
+                  viewBox="0 0 448 512"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 69.2 27 107.2 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-67.8-4.3-6.8c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.6-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.5 19-19.5 46.3 0 27.3 20 53.7 22.6 57.4 2.6 3.7 36.1 55.1 87.5 77.3 12.3 5.3 21.9 8.5 29.4 11 12.3 3.9 23.5 3.4 32.4 2 10.2-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
+                  /></svg
+              ></span>
+              <span>Compartilhar no WhatsApp</span>
+            </button>
+          </div>
+        </div>
+      </section>
 
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <span class="info-label">Festa em</span>
-                            <span class="info-value">15/08</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Contribua até</span>
-                            <span class="info-value">13/08</span>
-                        </div>
-                    </div>
-                </div>
+      <!-- INFORMAÇÃO SOBRE A CONTRIBUIÇÃO -->
+      <section>
+        <div class="container">
+          <div
+            style="
+              background: #1a1a1a;
+              border-radius: 20px;
+              padding: 50px 40px;
+              text-align: center;
+              margin-bottom: 60px;
+            "
+          >
+            <p
+              style="
+                font-size: 1.1rem;
+                color: #d0f0d8;
+                line-height: 1.8;
+                margin: 0;
+              "
+            >
+              <strong>Sua contribuição será utilizada para comprar</strong
+              ><br />
+              <span
+                style="
+                  font-size: 1.3rem;
+                  color: #90ee90;
+                  font-weight: 700;
+                  white-space: nowrap;
+                  display: inline-block;
+                "
+                >Refrigerante 🥤 e Carne 🥩</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section>
+        <div class="container">
+          <div class="countdown-section">
+            <h2 class="countdown-title">Faltam</h2>
+            <div class="countdown-bar">
+              <div class="countdown-item">
+                <span class="countdown-value" id="days">0</span>
+                <span class="countdown-label">dias</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="hours">0</span>
+                <span class="countdown-label">horas</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="minutes">0</span>
+                <span class="countdown-label">minutos</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="seconds">0</span>
+                <span class="countdown-label">segundos</span>
+              </div>
             </div>
-        </section>
+
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="info-label">Festa em</span>
+                <span class="info-value">15/08</span>
+              </div>
+              <div class="info-item">
+                <span class="info-label">Contribua até</span>
+                <span class="info-value">13/08</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-        <!-- FAQ -->
-        <section>
-            <div class="container">
-                <div class="faq-section">
-                    <h2 class="faq-title">❓ Dúvidas Frequentes</h2>
-                    
-                    <div class="faq-item">
-                        <div class="faq-question">Existe um valor mínimo de contribuição?</div>
-                        <div class="faq-answer">Não! Qualquer valor é uma bênção. Colabore conforme seu coração o guiar.</div>
-                    </div>
+    <!-- FAQ -->
+    <section>
+      <div class="container">
+        <div class="faq-section">
+          <h2 class="faq-title">❓ Dúvidas Frequentes</h2>
 
-                    <div class="faq-item">
-                        <div class="faq-question">Há um valor máximo ou mínimo?</div>
-                        <div class="faq-answer">Não há valor mínimo ou máximo. Cada um contribua conforme puder e quiser. O que importa é a intenção de participar dessa celebração coletiva.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">Como faço para contribuir?</div>
-                        <div class="faq-answer">Claro! Você pode fazer PIX para a chave acima ou procurar o irmão Clayton no culto para entregar dinheiro em mão. Ambas as formas são bem-vindas.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">Qual é o prazo para contribuir?</div>
-                        <div class="faq-answer">O prazo é até o dia 13 de agosto. Contribuições após essa data também podem ser aceitas, mas preferimos receber até essa data para melhor organização.</div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question">Posso comparecer sem contribuir financeiramente?</div>
-                        <div class="faq-answer">Tudo bem! A presença e participação de todos é o que mais importa. Você é sempre bem-vindo à festa, com ou sem contribuição financeira.</div>
-                    </div>
-                </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Existe um valor mínimo de contribuição?
             </div>
-        </section>
+            <div class="faq-answer">
+              Não! Qualquer valor é uma bênção. Colabore conforme seu coração o
+              guiar.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Há um valor máximo ou mínimo?</div>
+            <div class="faq-answer">
+              Não há valor mínimo ou máximo. Cada um contribua conforme puder e
+              quiser. O que importa é a intenção de participar dessa celebração
+              coletiva.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Como faço para contribuir?</div>
+            <div class="faq-answer">
+              Claro! Você pode fazer PIX para a chave acima ou procurar os
+              irmãos Clayton ou Isaque no culto para entregar dinheiro em mão.
+              Ambas as formas são bem-vindas.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">Qual é o prazo para contribuir?</div>
+            <div class="faq-answer">
+              O prazo é até o dia 13 de agosto. Contribuições após essa data
+              também podem ser aceitas, mas preferimos receber até essa data
+              para melhor organização.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Posso comparecer sem contribuir financeiramente?
+            </div>
+            <div class="faq-answer">
+              Tudo bem! A presença e participação de todos é o que mais importa.
+              Você é sempre bem-vindo à festa, com ou sem contribuição
+              financeira.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>
-            <strong>Que Deus nos abençoe</strong> nesta celebração! 🙏<br>
-            Festa da Colheita<br>
-            Um momento de graças e comunhão
-        </p>
+      <p>
+        <strong>Que Deus nos abençoe</strong> nesta celebração! 🙏<br />
+        Festa da Colheita<br />
+        Um momento de graças e comunhão
+      </p>
     </footer>
 
     <!-- TOAST -->
-    <div id="toast" class="toast" style="display: none;"></div>
+    <div id="toast" class="toast" style="display: none"></div>
 
     <script>
-        const PIX_KEY = '22a2c372-d1df-47e6-8e0d-b758635c78a9';
-        const PAGE_URL = window.location.href;
+      const PIX_KEY = "22a2c372-d1df-47e6-8e0d-b758635c78a9";
+      const PAGE_URL = window.location.href;
 
-        function updateCountdown() {
-            const targetDate = new Date('2026-08-15T19:30:00').getTime();
-            const now = new Date().getTime();
-            const distance = targetDate - now;
+      function updateCountdown() {
+        const targetDate = new Date("2026-08-15T19:30:00").getTime();
+        const now = new Date().getTime();
+        const distance = targetDate - now;
 
-            if (distance < 0) {
-                document.getElementById('days').textContent = '0';
-                document.getElementById('hours').textContent = '00';
-                document.getElementById('minutes').textContent = '00';
-                document.getElementById('seconds').textContent = '00';
-                return;
-            }
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = days;
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        if (distance < 0) {
+          document.getElementById("days").textContent = "0";
+          document.getElementById("hours").textContent = "00";
+          document.getElementById("minutes").textContent = "00";
+          document.getElementById("seconds").textContent = "00";
+          return;
         }
 
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        window.addEventListener('load', function() {
-            const qrContainer = document.getElementById('qrcode');
-            if (qrContainer && qrContainer.children.length === 0) {
-                new QRCode(qrContainer, {
-                    text: PIX_KEY,
-                    width: 200,
-                    height: 200,
-                    colorDark: '#0f0f0f',
-                    colorLight: '#ffffff',
-                    correctLevel: QRCode.CorrectLevel.H
-                });
-            }
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = String(hours).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("minutes").textContent = String(
+          minutes,
+        ).padStart(2, "0");
+        document.getElementById("seconds").textContent = String(
+          seconds,
+        ).padStart(2, "0");
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      window.addEventListener("load", function () {
+        const qrContainer = document.getElementById("qrcode");
+        if (qrContainer && qrContainer.children.length === 0) {
+          new QRCode(qrContainer, {
+            text: PIX_KEY,
+            width: 200,
+            height: 200,
+            colorDark: "#0f0f0f",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H,
+          });
+        }
+      });
+
+      function copiarPix() {
+        navigator.clipboard.writeText(PIX_KEY).then(() => {
+          showToast("✅ PIX copiado!");
         });
+      }
 
-        function copiarPix() {
-            navigator.clipboard.writeText(PIX_KEY).then(() => {
-                showToast('✅ PIX copiado!');
-            });
-        }
+      function compartilharWhatsapp() {
+        const texto = `🌾 *Festa da Colheita* 🌾\n\nIrmão, contamos com sua contribuição!\n\n💰 PIX ou Dinheiro (para comprar refrigerante e carne)\n\n📅 15/08 às 19h30\n⏰ Colabore até 13/08\n\n${PAGE_URL}`;
 
-        function compartilharWhatsapp() {
-            const texto = `🌾 *Festa da Colheita* 🌾\n\nIrmão, contamos com sua contribuição!\n\n💰 PIX ou Dinheiro (para comprar refrigerante e carne)\n\n📅 15/08 às 19h30\n⏰ Colabore até 13/08\n\n${PAGE_URL}`;
-            
-            const encodedText = encodeURIComponent(texto);
-            window.open(`https://wa.me/?text=${encodedText}`, '_blank');
-        }
+        const encodedText = encodeURIComponent(texto);
+        window.open(`https://wa.me/?text=${encodedText}`, "_blank");
+      }
 
-        function abrirWhatsappDuvidas() {
-            window.open('https://wa.me/5513988157820', '_blank');
-        }
+      function abrirWhatsappDuvidas() {
+        window.open("https://wa.me/5513988157820", "_blank");
+      }
 
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.style.display = 'block';
-            
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 3000);
-        }
+      function showToast(message) {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.style.display = "block";
+
+        setTimeout(() => {
+          toast.style.display = "none";
+        }, 3000);
+      }
     </script>
+  </body>
+</html>
