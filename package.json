@@ -1,0 +1,22 @@
+{
+  "name": "festa-colheita",
+  "version": "1.0.0",
+  "description": "Página de convite para colaboração na Festa da Colheita",
+  "main": "index.html",
+  "scripts": {
+    "dev": "echo 'Abra index.html no navegador'"
+  },
+  "keywords": [
+    "festa",
+    "colheita",
+    "convite",
+    "pix",
+    "countdown"
+  ],
+  "author": "Clayton",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/festa-colheita.git"
+  }
+}
