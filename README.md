@@ -12,6 +12,7 @@ Página de convite para colaboração na Festa da Colheita da igreja evangélica
 ## 🚀 Como fazer o deploy
 
 ### Pré-requisitos
+
 - Conta GitHub
 - Conta Vercel
 - Git instalado
@@ -43,12 +44,14 @@ git push origin main
 ### Passo 3: Deploy na Vercel
 
 **Opção A: Via Dashboard Vercel (mais fácil)**
+
 1. Vá para https://vercel.com/new
 2. Clique em "Import Git Repository"
 3. Selecione seu repositório `festa-colheita`
 4. Clique em "Deploy"
 
 **Opção B: Via CLI**
+
 ```bash
 vercel login
 vercel --prod
