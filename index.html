@@ -640,7 +640,7 @@
                 <div class="pix-key-box">
                   <label class="pix-label">Chave PIX</label>
                   <div class="pix-display" id="pixKey">
-                    CHAVE_PIX_REDACTED
+                    __PIX_KEY__
                   </div>
                   <button class="copy-btn" onclick="copiarPix()">
                     <span>📋</span>
@@ -836,7 +836,7 @@
     <div id="toast" class="toast" style="display: none"></div>
 
     <script>
-      const PIX_KEY = "CHAVE_PIX_REDACTED";
+      const PIX_KEY = "__PIX_KEY__";
       const PAGE_URL = window.location.href;
 
       function updateCountdown() {
@@ -903,7 +903,7 @@
       }
 
       function abrirWhatsappDuvidas() {
-        window.open("https://wa.me/55XXXXXXXXXXX", "_blank");
+        window.open("https://wa.me/__WHATSAPP_NUMBER__", "_blank");
       }
 
       function showToast(message) {

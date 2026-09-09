@@ -4,7 +4,8 @@
   "description": "Página de convite para colaboração na Festa da Colheita",
   "main": "index.html",
   "scripts": {
-    "dev": "echo 'Abra index.html no navegador'"
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && echo 'Abra dist/index.html no navegador'"
   },
   "keywords": [
     "festa",
