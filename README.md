@@ -4,8 +4,10 @@ Página de convite para colaboração na Festa da Colheita da igreja evangélica
 
 ## 📋 Conteúdo
 
-- **index.html** - Página principal (HTML + CSS + JavaScript inline)
-- **vercel.json** - Configuração Vercel
+- **index.html** - Template da página principal (HTML + CSS + JavaScript inline), com placeholders `__PIX_KEY__`/`__WHATSAPP_NUMBER__`
+- **scripts/build.mjs** - Gera `dist/index.html` substituindo os placeholders pelas variáveis de ambiente
+- **.env.example** - Variáveis de ambiente necessárias (com valores fictícios)
+- **vercel.json** - Configuração Vercel (build + output directory)
 - **.gitignore** - Arquivos a ignorar no Git
 - **.vercelignore** - Arquivos a ignorar no deploy Vercel
 
@@ -61,9 +63,19 @@ vercel --prod
 
 - **Data evento:** 15/08 às 19h30
 - **Prazo contribuição:** até 13/08
-- **Chave PIX:** CHAVE_PIX_REDACTED
-- **WhatsApp:** (XX) XXXXX-XXXX
 - **Contato presencial:** Procure Clayton ou Isaque no culto
+
+A chave PIX e o número de WhatsApp **não ficam no código-fonte** — são
+injetados no build a partir de variáveis de ambiente, para não expor dados
+pessoais em um repositório público:
+
+- `PIX_KEY`: a chave PIX exibida na página.
+- `WHATSAPP_NUMBER`: número de WhatsApp no formato internacional sem
+  símbolos (ex.: `5513900000000`), usado no botão "Falar no WhatsApp".
+
+Configure-as em **Vercel → Project Settings → Environment Variables**. Para
+rodar localmente, copie `.env.example` para `.env` com os valores reais,
+exporte-os no shell e rode `npm run build` antes de abrir `dist/index.html`.
 
 ## 📱 Recursos
 
